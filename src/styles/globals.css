@@ -1,0 +1,40 @@
+:root {
+	--breakpoint-mobile: 576px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-large-tablet: 992px;
+	--breakpoint-small-desktop: 1200px;
+	--breakpoint-desktop: 1400px;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	z-index: -1;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.5;
+	background-image: url("/images/poke-background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}

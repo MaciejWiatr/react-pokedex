@@ -1,0 +1,18 @@
+.layoutContainer {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 400px 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "sidebar content";
+	gap: 20px;
+	width: 100%;
+	max-width: var(--breakpoint-small-desktop);
+	margin: 0 auto;
+
+	@media (max-width: 726px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"sidebar"
+			"content";
+	}
+}
