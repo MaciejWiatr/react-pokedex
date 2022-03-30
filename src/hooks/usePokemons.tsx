@@ -4,15 +4,12 @@ import { useMemo } from "react";
 import { useInfiniteQuery } from "react-query";
 
 export const usePokemons = () => {
-	const { data, error, fetchNextPage, isLoading, isError } = useInfiniteQuery(
-		"pokemons",
-		fetchPokemonsQuery,
-		{
+	const { data, error, fetchNextPage, isLoading, isError, isFetching } =
+		useInfiniteQuery("pokemons", fetchPokemonsQuery, {
 			getNextPageParam: (_lastPage, pages) => {
 				return pages.length + 1;
 			},
-		}
-	);
+		});
 	const [nameFilter, typeFilter] = useFilterStore((state) => [
 		state.nameFilter,
 		state.typeFilter,
@@ -39,5 +36,12 @@ export const usePokemons = () => {
 		};
 	}, [data, nameFilter, typeFilter]);
 
-	return { data: filteredPokemons, error, fetchNextPage, isLoading, isError };
+	return {
+		data: filteredPokemons,
+		error,
+		fetchNextPage,
+		isLoading,
+		isError,
+		isFetching,
+	};
 };

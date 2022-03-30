@@ -7,12 +7,12 @@ import { ErrorIndicator } from "@components/ErrorIndicator";
 import s from "./PokemonList.module.scss";
 
 export const PokemonList = () => {
-	const { data, isLoading, isError, fetchNextPage } = usePokemons();
+	const { data, isLoading, isError } = usePokemons();
 
 	return (
 		<div className={s.container}>
 			<Switch>
-				<Case condition={isLoading && !data}>
+				<Case condition={isLoading}>
 					<LoadingIndicator />
 				</Case>
 				<Case condition={isError}>
