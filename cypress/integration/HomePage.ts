@@ -1,3 +1,4 @@
+// @ts-nocheck
 describe("Home page interactions", () => {
 	beforeEach(() => {
 		cy.visit("localhost:3000");
@@ -26,3 +27,5 @@ describe("Home page interactions", () => {
 		cy.get("[data-cy='item-ivysaur']").should("not.exist");
 	});
 });
+
+export {};
