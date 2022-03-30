@@ -5,6 +5,7 @@ import { MouseEventHandler } from "react";
 import { useForm } from "react-hook-form";
 import s from "./PokemonForm.module.scss";
 import { Button } from "@components/Button";
+import { DarkModeToggle } from "@components/DarkModeToggle";
 
 interface IFormData {
 	name: string;
@@ -53,6 +54,7 @@ export const PokemonForm = () => {
 						Filter
 					</Button>
 				</div>
+				<DarkModeToggle />
 			</form>
 		</div>
 	);

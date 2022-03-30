@@ -6,6 +6,21 @@
 	--breakpoint-large-tablet: 992px;
 	--breakpoint-small-desktop: 1200px;
 	--breakpoint-desktop: 1400px;
+
+	--bg-default: white;
+	--text-default: #404040;
+	--bg-image: url("/images/poke-background.png");
+}
+
+.dark-mode {
+	--bg-default: #404040;
+	--text-default: white;
+	--bg-image: url("/images/poke-background-dark.png");
+}
+
+body.dark-mode {
+	background-color: var(--bg-default);
+	color: var(--text-default);
 }
 
 html,
@@ -26,7 +41,7 @@ body::after {
 	bottom: 0px;
 	left: 0px;
 	opacity: 0.5;
-	background-image: url("/images/poke-background.png");
+	background-image: var(--bg-image);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
