@@ -5,14 +5,14 @@ import { SyncLoader } from "react-spinners";
 
 export const LoadingIndicator = () => {
 	return (
-		<div>
+		<div className={s.loaderContainer}>
 			<Image
 				width={200}
 				height={100}
 				src={SurprisedPikachu}
 				alt="Surprised pikachu"
 			/>
-			<SyncLoader />
+			<div>Loading pokemons...</div>
 		</div>
 	);
 };

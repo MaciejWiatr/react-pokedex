@@ -20,11 +20,12 @@ export const usePokemons = () => {
 		const filtered = data.pages.map((page) => {
 			return page.filter((pokemon) => {
 				const nameMatch =
-					nameFilter === "" || pokemon.name.includes(nameFilter);
+					nameFilter === "" ||
+					pokemon.name.toLowerCase().includes(nameFilter);
 				const typeMatch =
 					typeFilter === "" ||
 					pokemon.types.findIndex(
-						(type) => type.type.name === typeFilter
+						(type) => type.type.name.toLowerCase() === typeFilter
 					) !== -1;
 
 				return nameMatch && typeMatch;

@@ -10,6 +10,8 @@ interface IFilterStore {
 export const useFilterStore = create<IFilterStore>((set) => ({
 	nameFilter: "",
 	typeFilter: "",
-	setNameFilter: (nameFilter) => set((state) => ({ ...state, nameFilter })),
-	setTypeFilter: (typeFilter) => set((state) => ({ ...state, typeFilter })),
+	setNameFilter: (nameFilter) =>
+		set((state) => ({ ...state, nameFilter: nameFilter.toLowerCase() })),
+	setTypeFilter: (typeFilter) =>
+		set((state) => ({ ...state, typeFilter: typeFilter.toLowerCase() })),
 }));
