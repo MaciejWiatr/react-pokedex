@@ -19,8 +19,8 @@ export const FormInput = forwardRef(
 	) => {
 		return (
 			<div className={styles.container}>
-				{label ? <p className={styles.label}>{label}</p> : null}
 				<input
+					data-cy={`input-${label}`}
 					ref={ref}
 					{...inputProps}
 					className={styles.inputField}

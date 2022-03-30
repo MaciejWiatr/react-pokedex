@@ -34,14 +34,22 @@ export const PokemonForm = () => {
 		<div className={s.formContainer}>
 			<form onSubmit={handleSubmit(onSubmit)} className={s.form}>
 				<span className={s.formLabel}>Filter by name:</span>
-				<FormInput placeholder="Filter by name" {...register("name")} />
+				<FormInput
+					label="name"
+					placeholder="Filter by name"
+					{...register("name")}
+				/>
 				<span className={s.formLabel}>Filter by type:</span>
 				<FormInput placeholder="Filter by type" {...register("type")} />
 				<div className={s.buttonContainer}>
-					<Button onClick={onButtonClick} variant="primary">
+					<Button
+						name="fetch"
+						onClick={onButtonClick}
+						variant="primary"
+					>
 						Fetch more pokemons
 					</Button>
-					<Button type="submit" variant="secondary">
+					<Button name="filter" type="submit" variant="secondary">
 						Filter
 					</Button>
 				</div>

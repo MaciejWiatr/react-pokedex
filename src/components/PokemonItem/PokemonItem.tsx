@@ -11,7 +11,11 @@ interface IPokemonItemProps {
 export const PokemonItem = ({ pokemon, onClick }: IPokemonItemProps) => {
 	return (
 		<motion.div layout>
-			<div onClick={() => onClick(pokemon)} className={s.pokemonCard}>
+			<div
+				data-cy={`item-${pokemon.name}`}
+				onClick={() => onClick(pokemon)}
+				className={s.pokemonCard}
+			>
 				<div className={s.pokemonImage}>
 					<Image
 						src={pokemon.sprites.front_default}
