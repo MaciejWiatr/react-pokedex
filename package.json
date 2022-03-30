@@ -10,7 +10,7 @@
 		"e2e:headless": "cypress run --headless",
 		"test:dev:gui": "start-server-and-test dev http://localhost:3000 e2e",
 		"test:dev:headless": "start-server-and-test dev http://localhost:3000 e2e:headless",
-		"test:prod": "npm run build && start-server-and-test prod http://localhost:3000 e2e"
+		"test:prod": "npm run build && start-server-and-test start http://localhost:3000 e2e:headless"
 	},
 	"dependencies": {
 		"@types/debounce": "^1.2.1",
