@@ -1,4 +1,5 @@
 import { PokemonModal } from "@components";
+import { GlobalLoadingIndicator } from "@components/GlobalLoadingIndicator";
 import s from "./BaseLayout.module.scss";
 
 export const BaseLayout = ({ children }) => {
@@ -6,6 +7,7 @@ export const BaseLayout = ({ children }) => {
 		<main className={s.layoutContainer}>
 			{children}
 			<PokemonModal />
+			<GlobalLoadingIndicator />
 		</main>
 	);
 };
